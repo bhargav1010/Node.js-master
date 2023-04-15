@@ -10,8 +10,8 @@ const server=http.createServer((req,res)=>{
     res.setHeader('Content-Type','text/html');
     res.write('<html>');
     res.write('<title>HTML</title>');
-    res.write('<head><h1>Click Get button to get Welcom page</h1></head>')
-    res.write('<body><form action="/data_sent_to_file" method="POST"><input type=text name=data><button type="submit">Send Data</button></form></body>');
+    res.write('<head><h1>Enter the data you want to send to the dataFile</h1></head>')
+    res.write('<body><form action="/data_sent_to_file" method="POST"><textarea type=text name=data></textarea><button type="submit">Send Data</button></form></body>');
     res.write('</html>');
     }
     if(url==='/data_sent_to_file' && method==="POST"){
